@@ -11,15 +11,15 @@ var guessedLetters = [];
 var guessesLeft = 12;
 
 
-for (var i = 0; i < word.length; i++) {
-    answer[i] = "_";
-}
 
 document.onkeyup = function(event) {
-
+    for (var i = 0; i < word.length; i++) {
+        answer[i] = " _";
+    }
+    
 
 document.querySelector("#wins").innerHTML =  wins;
-document.querySelector("#currentWord").innerHTML = word;
+document.querySelector("#currentWord").innerHTML = answer;
 document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 document.querySelector("#lettersGuessed").innerHTML += guessedLetters;
 
