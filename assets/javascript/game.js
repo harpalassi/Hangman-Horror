@@ -6,8 +6,8 @@ var word = words[Math.floor(Math.random() * words.length)];
 //answer array
 var answer = [];
 
-var wins;
-var guessedLetters;
+var wins = 0;
+var guessedLetters = [];
 var guessesLeft = 12;
 
 
