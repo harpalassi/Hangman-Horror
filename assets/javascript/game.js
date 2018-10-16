@@ -8,15 +8,19 @@ var answer = [];
 
 var wins;
 var guessedLetters;
-var guessesLeft = word.length;
+var guessesLeft = 12;
 
 
 for (var i = 0; i < word.length; i++) {
     answer[i] = "_";
 }
 
+document.onkeyup = function(event) {
+
 
 document.querySelector("#wins").innerHTML =  wins;
 document.querySelector("#currentWord").innerHTML = word;
 document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 document.querySelector("#lettersGuessed").innerHTML += guessedLetters;
+
+};
