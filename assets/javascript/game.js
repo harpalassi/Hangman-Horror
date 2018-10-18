@@ -11,11 +11,18 @@ var guessesLeft = 12;
 
 console.log(word);
 
-document.onkeyup = function(event) {
+document.addEventListener("DOMContentLoaded", function(event) { 
+
+
     for (var i = 0; i < word.length; i++) {
         answer.push("_");
         
     }
+
+    document.onkeyup = function(event) {
+        var userGuess = event.key;
+        console.log(event.key);
+}    
     
 // DOM
 document.querySelector("#wins").innerHTML = wins;
@@ -23,4 +30,4 @@ document.querySelector("#currentWord").innerHTML = answer.join(" ");
 document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 document.querySelector("#lettersGuessed").innerHTML += guessedLetters;
 
-};
+});
