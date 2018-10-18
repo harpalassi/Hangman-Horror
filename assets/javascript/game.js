@@ -34,21 +34,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
     }
 
-
     //   console.log(userGuess);      
      } 
 
 
     if (letterFound === false) {
         guessedLetters.push(userGuess);
+        guessesLeft--;
+    }
+
+    if (guessesLeft < 0) {
+        alert("You Lose");
     }
         
 
-
-
-
      document.querySelector("#currentWord").innerHTML = answer.join(" ");
      document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(", ");
+     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
+     document.querySelector("#wins").innerHTML = wins;
+
 
 
 
