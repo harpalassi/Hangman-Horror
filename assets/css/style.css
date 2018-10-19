@@ -1,6 +1,16 @@
 body {
     background-color: black;
     color: white;
+    
+}
+
+.container-fluid {
+    border: 15px white solid;
+    padding-bottom: 200px;
+    margin-right: 50px;
+    margin-top: 30px;
+    border-radius: 35px;
+
 }
 
 #game {
