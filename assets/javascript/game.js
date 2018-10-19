@@ -1,5 +1,5 @@
 
-var words = ["halloween", "scream", "suspiria", "carrie", "hellraiser"];
+var words = ["halloween", "scream", "suspiria", "carrie", "hellraiser", "poltergeist", "psycho", "maniac"];
 var word;
 var answer;
 var wins = 0;
