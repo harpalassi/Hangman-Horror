@@ -2,7 +2,7 @@
 var words = ["halloween", "scream", "suspiria", "carrie", "hellraiser"];
 var word;
 var answer;
-var wins;
+var wins = 0;
 var guessedLetters = [];
 var guessesLeft;
 //run this function when page start to load underscores
@@ -16,7 +16,6 @@ word = words[Math.floor(Math.random() * words.length)];
 //answer array
 answer = [];
 
-wins = 0;
 guessedLetters = [];
 guessesLeft = 12;
 
@@ -66,8 +65,8 @@ document.onkeyup = function (event) {
 
     if (answer.join('') === word) {
         wins++;
-        alert("You Win")
-        newGame();
+        // alert("You Win")
+        setTimeout(newGame, 1000);
     }
 
     document.querySelector("#currentWord").innerHTML = answer.join(" ");
