@@ -6,7 +6,7 @@ body {
 
 .container-fluid {
     border: 15px white solid;
-    padding-bottom: 200px;
+    padding-bottom: 80px;
     margin-right: 50px;
     margin-top: 30px;
     border-radius: 50px;
@@ -30,3 +30,4 @@ h2 {
     color:orange;
     text-transform: uppercase;
 }
+
