@@ -75,14 +75,6 @@ document.onkeyup = function (event) {
     document.querySelector("#wins").innerHTML = wins;
 
 
-
-
-    //check if userGuess is not in word. 
-    //   if (word.indexOf(userGuess) < -1) {
-    //        guessedLetters.push(userGuess);
-
-
-
 }
 
 
