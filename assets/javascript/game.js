@@ -36,7 +36,7 @@ console.log(word);
 }
 
 document.onkeyup = function (event) {
-    var userGuess = event.key;
+    var userGuess = event.key.toLowerCase();
 
 
     //check if userGuess is in the word.
