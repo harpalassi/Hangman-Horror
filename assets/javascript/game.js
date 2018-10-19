@@ -9,8 +9,6 @@ var guessesLeft;
 
 function newGame(event) {
 
-//word bank
-
 //random word from bank
 word = words[Math.floor(Math.random() * words.length)];
 //answer array
@@ -52,7 +50,7 @@ document.onkeyup = function (event) {
     }
 
 
-    if (letterFound === false) {
+    if (letterFound === false && !guessedLetters.includes(userGuess)) {
         guessedLetters.push(userGuess);
         guessesLeft--;
     }
