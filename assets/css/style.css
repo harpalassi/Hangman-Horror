@@ -30,3 +30,8 @@ h2 {
     color:orange;
     text-transform: uppercase;
 }
+
+.col-sm {
+    padding-left: 50px;
+
+}
