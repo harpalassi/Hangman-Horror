@@ -58,7 +58,7 @@ document.onkeyup = function (event) {
     }
 
     if (guessesLeft < 0) {
-        alert("You Lose");
+        alert("BOO! YOU LOSE!");
         guessesLeft = 12;
         newGame();
     }
