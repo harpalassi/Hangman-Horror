@@ -15,7 +15,7 @@ word = words[Math.floor(Math.random() * words.length)];
 answer = [];
 
 guessedLetters = [];
-guessesLeft = 12;
+guessesLeft = 10;
 
 console.log(word);
     for (var i = 0; i < word.length; i++) {
@@ -57,7 +57,7 @@ document.onkeyup = function (event) {
 
     if (guessesLeft < 0) {
         alert("BOO! YOU LOSE!");
-        guessesLeft = 12;
+        guessesLeft = 10;
         newGame();
     }
 
