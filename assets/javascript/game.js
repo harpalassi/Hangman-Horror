@@ -64,7 +64,7 @@ document.onkeyup = function (event) {
     if (answer.join('') === word) {
         wins++;
         // alert("You Win")
-        setTimeout(newGame, 1000);
+        setTimeout(newGame, 500);
     }
 
     document.querySelector("#currentWord").innerHTML = answer.join(" ");
