@@ -34,8 +34,9 @@ console.log(word);
 }
 
 document.onkeyup = function (event) {
-    var userGuess = event.key.toLowerCase();
-
+    if(event.keyCode >= 65 && event.keyCode <= 90) {
+        var userGuess = event.key.toLowerCase();
+    }
 
     //check if userGuess is in the word.
     var letterFound = false;
