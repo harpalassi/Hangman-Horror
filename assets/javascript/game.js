@@ -50,7 +50,6 @@ document.onkeyup = function (event) {
 
     }
 
-
     if (letterFound === false && !guessedLetters.includes(userGuess) && event.keyCode >= 65 && event.keyCode <= 90) {
         guessedLetters.push(userGuess);
         guessesLeft--;

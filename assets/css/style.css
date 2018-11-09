@@ -17,8 +17,9 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     text-align: center;
+    width: 100%;
 }
 
 h2 {
@@ -30,6 +31,7 @@ h2 {
 }
 
 .col-sm {
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
