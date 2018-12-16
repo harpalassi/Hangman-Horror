@@ -1,5 +1,5 @@
 
-var words = ["halloween", "scream", "suspiria", "carrie", "hellraiser", "poltergeist", "psycho", "maniac"];
+var words = ["black christmas", "blood rage", "slumber party massacre", "sleepaway camp", "the burning", "friday the 13th", "scream 3", "suspiria", "the texas chainsaw massacre", "maniac"];
 var word;
 var answer;
 var wins = 0;
@@ -19,22 +19,26 @@ guessesLeft = 10;
 
 console.log(word);
     for (var i = 0; i < word.length; i++) {
-        answer.push("_");
+        if (word[i] === " ") {
+            answer.push(" ");
+        } else {
+            answer.push("_");
 
     }
     //run this when user presses a key to log the key. 
     
     // DOM
     document.querySelector("#wins").innerHTML = wins;
-    document.querySelector("#currentWord").innerHTML = answer.join(" ");
+    document.querySelector("#currentWord").textContent = answer.join("");
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(", ");
 
 
 }
+}
 
 document.onkeyup = function (event) {
-    if(event.keyCode >= 65 && event.keyCode <= 90) {
+    if(event.keyCode >= 48 && event.keyCode <= 90) {
         var userGuess = event.key.toLowerCase();
     }
 
@@ -50,7 +54,7 @@ document.onkeyup = function (event) {
 
     }
 
-    if (letterFound === false && !guessedLetters.includes(userGuess) && event.keyCode >= 65 && event.keyCode <= 90) {
+    if (letterFound === false && !guessedLetters.includes(userGuess) && event.keyCode >= 48 && event.keyCode <= 90) {
         guessedLetters.push(userGuess);
         guessesLeft--;
     }
@@ -67,7 +71,7 @@ document.onkeyup = function (event) {
         setTimeout(newGame, 500);
     }
 
-    document.querySelector("#currentWord").innerHTML = answer.join(" ");
+    document.querySelector("#currentWord").textContent = answer.join("");
     document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(", ");
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     document.querySelector("#wins").innerHTML = wins;
