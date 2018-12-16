@@ -20,6 +20,10 @@ body {
     letter-spacing: 3.5px;
 }
 
+#losses {
+    padding-left: 15px;
+}
+
 h1 {
     font-size: 3.5em;
     text-align: center;

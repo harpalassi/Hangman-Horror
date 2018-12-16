@@ -5,6 +5,7 @@ var answer;
 var wins = 0;
 var guessedLetters = [];
 var guessesLeft;
+var losses = 0;
 
 function newGame(event) {
 document.querySelector("#gameInfo").textContent = "Press any letter to begin..."
@@ -14,7 +15,7 @@ word = words[Math.floor(Math.random() * words.length)];
 answer = [];
 
 guessedLetters = [];
-guessesLeft = 10;
+guessesLeft = 5;
 
 console.log(word);
     for (var i = 0; i < word.length; i++) {
@@ -27,6 +28,7 @@ console.log(word);
     
     // DOM
     document.querySelector("#wins").innerHTML = wins;
+    document.querySelector("#losses").textContent = `Losses: ${losses}`
     document.querySelector("#currentWord").textContent = answer.join("");
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(", ");
@@ -58,6 +60,7 @@ document.onkeyup = function (event) {
     }
 
     if (guessesLeft < 0) {
+        losses++;
         document.querySelector("#gameInfo").textContent = "BOO! YOU LOSE!"
         guessesLeft = 10;
         setTimeout(newGame, 1500);
@@ -65,7 +68,7 @@ document.onkeyup = function (event) {
 
     if (answer.join('') === word) {
         wins++;
-        document.querySelector("#gameInfo").textContent = "NICE ONE..YOU WIN!"
+        document.querySelector("#gameInfo").textContent = "NICE ONE... YOU WIN!"
         setTimeout(newGame, 1500);
     }
 
@@ -73,6 +76,8 @@ document.onkeyup = function (event) {
     document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(", ");
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     document.querySelector("#wins").innerHTML = wins;
+    document.querySelector("#losses").textContent = `Losses: ${losses}`
+
 
 
 }
