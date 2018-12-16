@@ -5,7 +5,6 @@ var answer;
 var wins = 0;
 var guessedLetters = [];
 var guessesLeft;
-//run this function when page start to load underscores
 
 function newGame(event) {
 document.querySelector("#gameInfo").textContent = "Press any letter to begin..."
@@ -25,7 +24,6 @@ console.log(word);
             answer.push("_");
 
     }
-    //run this when user presses a key to log the key. 
     
     // DOM
     document.querySelector("#wins").innerHTML = wins;
@@ -60,15 +58,14 @@ document.onkeyup = function (event) {
     }
 
     if (guessesLeft < 0) {
-        // alert("BOO! YOU LOSE!");
-        document.querySelector("#gameInfo").textContent = "YOU LOSE!"
+        document.querySelector("#gameInfo").textContent = "BOO! YOU LOSE!"
         guessesLeft = 10;
         setTimeout(newGame, 1500);
     }
 
     if (answer.join('') === word) {
         wins++;
-        document.querySelector("#gameInfo").textContent = "YOU WIN!"
+        document.querySelector("#gameInfo").textContent = "NICE ONE..YOU WIN!"
         setTimeout(newGame, 1500);
     }
 
