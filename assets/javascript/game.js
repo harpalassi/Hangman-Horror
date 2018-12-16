@@ -8,7 +8,7 @@ var guessesLeft;
 //run this function when page start to load underscores
 
 function newGame(event) {
-
+document.querySelector("#gameInfo").textContent = "Press any letter to begin..."
 //random word from bank
 word = words[Math.floor(Math.random() * words.length)];
 //answer array
@@ -60,15 +60,16 @@ document.onkeyup = function (event) {
     }
 
     if (guessesLeft < 0) {
-        alert("BOO! YOU LOSE!");
+        // alert("BOO! YOU LOSE!");
+        document.querySelector("#gameInfo").textContent = "YOU LOSE!"
         guessesLeft = 10;
-        newGame();
+        setTimeout(newGame, 1500);
     }
 
     if (answer.join('') === word) {
         wins++;
-        // alert("You Win")
-        setTimeout(newGame, 500);
+        document.querySelector("#gameInfo").textContent = "YOU WIN!"
+        setTimeout(newGame, 1500);
     }
 
     document.querySelector("#currentWord").textContent = answer.join("");
@@ -81,3 +82,4 @@ document.onkeyup = function (event) {
 
 
 document.addEventListener("DOMContentLoaded", newGame);
+
