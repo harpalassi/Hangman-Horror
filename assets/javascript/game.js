@@ -38,6 +38,8 @@ console.log(word);
 }
 
 document.onkeyup = function (event) {
+    document.querySelector("#gameInfo").textContent = "NOW PLAYING"
+
     if(event.keyCode >= 48 && event.keyCode <= 90) {
         var userGuess = event.key.toLowerCase();
     }
