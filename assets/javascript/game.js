@@ -64,7 +64,7 @@ document.onkeyup = function (event) {
     if (guessesLeft < 0) {
         losses++;
         document.querySelector("#gameInfo").textContent = "BOO! YOU LOSE!"
-        guessesLeft = 10;
+        guessesLeft = 0;
         setTimeout(newGame, 1500);
     }
 
