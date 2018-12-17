@@ -8,6 +8,7 @@ var guessesLeft;
 var losses = 0;
 
 function newGame(event) {
+document.querySelector("h2").classList.remove("freefall");
 document.querySelector("#gameInfo").textContent = "Press any letter to begin..."
 //random word from bank
 word = words[Math.floor(Math.random() * words.length)];
@@ -63,15 +64,18 @@ document.onkeyup = function (event) {
 
     if (guessesLeft < 0) {
         losses++;
+        document.querySelector("h2").classList.add("freefall")
         document.querySelector("#gameInfo").textContent = "BOO! YOU LOSE!"
         guessesLeft = 0;
-        setTimeout(newGame, 1500);
+        setTimeout(newGame, 3000);
     }
 
     if (answer.join('') === word) {
+        
         wins++;
+        document.querySelector("h2").classList.add("freefall")
         document.querySelector("#gameInfo").textContent = "NICE ONE... YOU WIN!"
-        setTimeout(newGame, 1500);
+        setTimeout(newGame, 3000);
     }
 
     document.querySelector("#currentWord").textContent = answer.join("");

@@ -55,8 +55,17 @@ h2 {
     animation-name: flashing; 
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    position: relative;
 
 
+}
+
+.freefall {
+    animation-name: dropdown; 
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    position: relative;
 }
 
 
@@ -74,4 +83,9 @@ h2 {
     50%{color: green}
     75%{color: orange}
     100%{color: green}
+}
+
+@keyframes dropdown {
+    0% {top: 0px}
+    100%{top: 400px; font-size: 2em; letter-spacing: 2px;};
 }
