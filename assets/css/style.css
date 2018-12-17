@@ -34,6 +34,7 @@ h1 {
     animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 h2 {
