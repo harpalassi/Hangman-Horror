@@ -29,8 +29,9 @@ h1 {
     text-align: center;
     width: 100%;
     color: orange;
+    letter-spacing: 10px;
     animation-name: myanimation;
-    animation-duration: 12s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -59,17 +60,17 @@ h2 {
 
 
 @keyframes myanimation {
-    0% {color: orange}
-    25% {color: black}
-    50% {color: red}
-    75% {color: black};
-    100% {color: orange}
+    0% {color: orange; letter-spacing: 10px}
+    25% {color: orangered; letter-spacing: 7px}
+    50% {color: red; letter-spacing: 3px}
+    75% {color: orange; letter-spacing: 10px}
+    100% {color:black}
 }
-/* 
+
 @keyframes flashing {
-    0%{color: black}
+    0%{color: green}
     25%{color: orange}
-    50%{color: black}
+    50%{color: green}
     75%{color: orange}
-    100%{color: black}
-} */
+    100%{color: green}
+}
