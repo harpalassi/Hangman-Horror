@@ -33,7 +33,7 @@ function newGame(event) {
   gamePlay();
   document.querySelector("h2").classList.remove("freefall");
   document.querySelector("#gameInfo").textContent =
-    "Press any letter to begin...";
+    "Press any letter to play...";
   //random word from bank
   word = words[Math.floor(Math.random() * words.length)];
   //answer array
