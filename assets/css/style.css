@@ -28,6 +28,11 @@ h1 {
     font-size: 3.5em;
     text-align: center;
     width: 100%;
+    color: orange;
+    animation-name: myanimation;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 h2 {
@@ -43,3 +48,28 @@ h2 {
     padding-right: 30px;
 
 }
+
+#gameInfo {
+    animation-name: flashing; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+}
+
+
+@keyframes myanimation {
+    0% {color: orange}
+    25% {color: black}
+    50% {color: red}
+    75% {color: black};
+    100% {color: orange}
+}
+/* 
+@keyframes flashing {
+    0%{color: black}
+    25%{color: orange}
+    50%{color: black}
+    75%{color: orange}
+    100%{color: black}
+} */
