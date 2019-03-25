@@ -1,5 +1,4 @@
 // word bank
-
 const words = [
   'black christmas',
   'blood rage',
@@ -42,17 +41,14 @@ const newGame = event => {
   document.querySelector('#gameInfo').textContent =
     'Press any letter to play...';
 
-  //prints a random word from word bank
+  //prints a random word from word bank, sets game stats to beginning
   word = words[Math.floor(Math.random() * words.length)];
-
   answer = [];
-
   guessedLetters = [];
   guessesLeft = 5;
-
   console.log(word);
 
-  //go through the word selected and print an underscore or space
+  //loop through the word selected and print an underscore or space to the DOM
   for (let i = 0; i < word.length; i++) {
     if (word[i] === ' ') {
       answer.push(' ');
@@ -75,11 +71,12 @@ const gamePlay = () => {
   document.onkeyup = function(event) {
     document.querySelector('#gameInfo').textContent = 'NOW PLAYING';
 
+    //if the user input is a letter or number then register the guess
     if (event.keyCode >= 48 && event.keyCode <= 90) {
       var userGuess = event.key.toLowerCase();
     }
 
-    //check if userGuess is in the word.
+    //check to see if userGuess is in the word chosen, if so change undeerscore to letter.
     let letterFound = false;
     for (let i = 0; i < word.length; i++) {
       if (word[i] === userGuess) {
@@ -88,6 +85,7 @@ const gamePlay = () => {
       }
     }
 
+    //if the guess does not match, push the guess into the guessed array unless it's already in there
     if (
       letterFound === false &&
       !guessedLetters.includes(userGuess) &&
@@ -98,6 +96,7 @@ const gamePlay = () => {
       guessesLeft--;
     }
 
+    //if guesses are less than zero, game over
     if (guessesLeft < 0) {
       losses++;
       document.querySelector('h2').classList.add('freefall');
@@ -107,6 +106,7 @@ const gamePlay = () => {
       setTimeout(newGame, 3000);
     }
 
+    //if the word is completed, user wins game
     if (answer.join('') === word) {
       wins++;
       document.querySelector('h2').classList.add('freefall');
@@ -115,6 +115,7 @@ const gamePlay = () => {
       setTimeout(newGame, 3000);
     }
 
+    //prints stats to the DOM
     document.querySelector('#currentWord').textContent = answer.join('');
     document.querySelector('#lettersGuessed').innerHTML = guessedLetters.join(
       ', '
@@ -125,4 +126,5 @@ const gamePlay = () => {
   };
 };
 
+//loads a new game on page load
 document.addEventListener('DOMContentLoaded', newGame);
