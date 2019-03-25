@@ -1,4 +1,4 @@
-# HANGMAN HORROR 😱
+# HANGMAN HORROR 👻
 
 ![screenshot](assets/images/screenshot.png)
 
