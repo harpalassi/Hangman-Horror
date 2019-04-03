@@ -8,7 +8,7 @@ _Hangman Horror_ is a hangman game based upon titles of cult horror films. The g
 
 The user will try to guess the word displayed by underscores. They will have 5 guesses and each incorrect guess will be displayed. After the user wins or loses, the game will automatically select a new word. The number of wins and losses are tallied.
 
-🚀 Deployed at https://harpalassi.github.io/Hangman-Horror
+🚀 Deployed at https://harpalassi.github.io/hangman-horror
 
 ## Built With
 
